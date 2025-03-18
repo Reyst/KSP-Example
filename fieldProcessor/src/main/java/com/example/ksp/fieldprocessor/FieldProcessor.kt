@@ -1,7 +1,6 @@
 package com.example.ksp.fieldprocessor
 
 import com.google.devtools.ksp.processing.CodeGenerator
-import com.google.devtools.ksp.processing.KSPLogger
 import com.google.devtools.ksp.processing.Resolver
 import com.google.devtools.ksp.processing.SymbolProcessor
 import com.google.devtools.ksp.symbol.KSAnnotated
@@ -94,8 +93,10 @@ class FieldProcessor(
                 fileName = "${className.simpleName}$CLASS_NAME_SUFFIX",
             )
             .addType(resolverObject)
+            .addFunction(extensionFunction)
             .build()
 
+/*
         val fileSpec2 = FileSpec
             .builder(
                 packageName = packageName,
@@ -103,9 +104,10 @@ class FieldProcessor(
             )
             .addFunction(extensionFunction)
             .build()
+*/
 
-            fileSpec1.writeTo(codeGenerator, false)
-            fileSpec2.writeTo(codeGenerator, false)
+            fileSpec1.writeTo(codeGenerator, true)
+//            fileSpec2.writeTo(codeGenerator, false)
     }
 
     private fun getMapInitializer(ksClassDeclaration: KSClassDeclaration): CodeBlock {
