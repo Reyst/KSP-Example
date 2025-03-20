@@ -8,3 +8,6 @@ annotation class HasMetadata
 @Retention(AnnotationRetention.SOURCE)
 annotation class MetaField(val value: String = "")
 
+@Target(AnnotationTarget.PROPERTY)
+@Retention(AnnotationRetention.SOURCE)
+annotation class CustomFields

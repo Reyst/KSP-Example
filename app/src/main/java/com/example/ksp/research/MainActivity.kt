@@ -19,8 +19,13 @@ import com.example.ksp.research.ui.theme.KSPResearchTheme
 
 class MainActivity : ComponentActivity() {
 
-    private val fields = listOf("Name", "ID", "ToTaL")
-    private val data = Info("Test name", 1024, 299.78F)
+    private val fields = listOf("Name", "ID", "ToTaL", "test", "tt1")
+    private val data = Info(
+        s = "Test name",
+        i = 2048,
+        f = 1500F,
+        cf = mapOf("test" to "CustomField")
+    )
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

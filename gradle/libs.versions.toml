@@ -41,4 +41,3 @@ kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "ko
 jetbrains-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "jetbrainsKotlinJvm" }
 
 google-devtools-ksp = { id = "com.google.devtools.ksp", version.ref = "googleDevtools" }
-
